@@ -180,7 +180,7 @@ VAR party = false
     
         ~askFlag = true
         ->session3p1
-    *Play it off
+    *[Play it off]
     
     **The Four Horseman
         'Why are you all on the lake? It does not seem easy to get it.'
@@ -215,7 +215,7 @@ VAR party = false
     ~askFlag = true
     
     
-    *Play it off
+    *[Play it off]
     
     **The Four Horseman
         'Why are you all on the lake? It does not seem easy to get it.'
@@ -287,7 +287,7 @@ VAR party = false
             Conquest counters such notion, 
             "Any work is a service for someone. I cannot imagine you doing work you did not believe in." #CLASS: cqst
             ->session3p2
-    *Question the others
+    *[Question the others]
         'What about you guys.'
         "What do you mean?" Famine asks. #CLASS: fmn
         'Well where did you guys come from. Like
@@ -298,6 +298,7 @@ VAR party = false
     
 === session3p2 ===
     *{youFlag} Learn about yourself
+        "Since you have mentioned it, I feel I must ask. Why do you think you are here?" #CLASS:lcfr
         'Last I remember of my mortal life, I was'
     **'at the park.'
         "Enjoying a lovely stroll, eh?" Conquest jests. #CLASS: cqst
@@ -306,13 +307,16 @@ VAR party = false
         ***Yes
             'Why yes I was. It was a nice day off work that I took for myself.'
             Lucifer, for the first time, contributes in a casual manner, "I had loved walking under that Earthly sun. The heat is cast soothed me. Sweaty to an ungodly extent... maybe I shouldn't say ungodly." 
-            The table chuckles a bit at his moment of openness
+            The table chuckles a bit at his moment of openness.
             ~lucifer += 1
+            'It was good, but I just felt dizzy. My mind was screaming not to, but my body simply laid out onto the ground.'
             ->lineOfQuestioning
+            
         ***No 
             'Well no actually. It was a sad day, a lonely one. My partner had left me, and my friends too. Said I never cared enough.'
             "Bollocks!" Death exclaims, "You've been a perfectly lovely guest at our table! I'd love to have you around." #CLASS: dth
             The table nods and mumbles in agreement.
+            'It was good, but I just felt dizzy. My mind was screaming not to, but my body simply laid out onto the ground.'
             ->lineOfQuestioning
         
     **'at a party'
@@ -344,13 +348,13 @@ VAR party = false
             Despite his beliefs, it was not. Being forced to lie and write wrong reciepts to back up a large company is not noble.
             
             ->lineOfQuestioning
-    *{tableFlag} Question the others
+    *{tableFlag} [Question the others]
         'What about you guys.'
         "What do you mean?" Famine asks. #CLASS: fmn
         'Well where did you guys come from. Like <>
         ->lineOfQuestioning
         
-    *{tableFlag || youFlag} Continue
+    *{tableFlag || youFlag} [Continue]
         ->luciferQ1
         
         
@@ -359,7 +363,7 @@ VAR party = false
     *{deathFlag} [Death]
         Death'
         {themCount == 0 && theirNames:"Well we've already told ya, each of us ain't from where you are." |} #CLASS: dth
-        {themCount == 0:"Well you do know we ain't from Earth. Came right of the void, you could say."|}
+        {themCount == 0:"Well you do know we ain't from Earth. Came right of the void, you could say."|} #CLASS: dth
          {themCount == 0:'Well, what would you be if you were human?' |}
          {themCount == 0:The table was shocked by this line of questioning. Them, concepts and immortals, questioned what if they were humans. | }
         "Well, if I had to choose. A plague doctor during the Black Death. Quite fitting, and I can tell I'd be ravishing in that outfit." #CLASS: dth
@@ -399,7 +403,7 @@ VAR party = false
         ~themCount += 1
         ->lineOfQuestioning
     
-    *{themCount >= 2} Continue
+    *{themCount >= 2} [Continue]
         ->luciferQ2
     ->luciferQ2
     
@@ -408,7 +412,7 @@ VAR party = false
 ->lucifersOrigin
 
 === luciferQ2 ===
-    'Lucifer? I never really was a Bible reader, so what happened to you.'
+    Lucifer? I never really was a Bible reader, so what happened to you.'
     
 ->lucifersOrigin
 
@@ -473,33 +477,38 @@ VAR party = false
         
 === godTalkRegret ===
     bar #CLASS: bar
-    "You have done well my son." A disembodied voice speaks. It's soothing to incomprehensible amount.
+    "You have done well my son." #CLASS: god
+    A disembodied voice speaks. It's soothing to incomprehensible amount.
     'What have I done?' you reply.
-    "You have gotten Lucifer to confess, and for such I thank you. I had hoped he would be regretful in the least, but.. I suppose he does not fully. Despite his relentlessness, I offer you a boon. Rebirth, Heaven, or Hell. I shall grant you any of these my son."
+    "You have gotten Lucifer to confess, and for such I thank you. I had hoped he would be regretful in the least, but.. I suppose he does not fully. Despite his relentlessness, I offer you a boon. Rebirth, Heaven, or Hell. I shall grant you any of these my son." #CLASS: god
     ->godTalkChoices
     
 === godTalkReveal ===
     bar #CLASS: bar
-    "Not exactly my hopes." A disembodied voice speaks. It's dissapointment is overshadowed by its inherent smooth quality, of which the full extent is incomprehensible amount.
+    "Not exactly my hopes."#CLASS: god
+    A disembodied voice speaks. It's dissapointment is overshadowed by its inherent smooth quality, of which the full extent is incomprehensible amount.
     'I apologize, God. I know not how I failed you, and not how I would succeed you.'
     "You were meant to coax his confession, his regret. I want desperately for him to be by my side, yet he refuses to truly feel shame."
     *Listen
-    "You have tried, for that I do not blame you. I sahll still offer you a boon. Rebirth, Heaven, or Hell. I shall grant you any of these my son."
+    "You have tried, for that I do not blame you. I sahll still offer you a boon. Rebirth, Heaven, or Hell. I shall grant you any of these my son." #CLASS: god
     ->godTalkChoices
     
     *Confront
     'Shame and regret are not the same.'
-    The light shining upon you dims slightly, "What ever do you mean?" the voice says.
+    The light shining upon you dims slightly, 
+    "What ever do you mean?" #CLASS: god
+    the voice says.
     'He wouldn't change his motives, that much is true. However, he feels a deep shame for the souls around him he doomed.' 
     You say, feeling a pinch of irony and realization. The general light is dim, but a point begins to form of a bright yellow. 
-    "If you believe so, then you can just stay with him."
+    "If you believe so, then you can just stay with him." #CLASS: god
     ->backToHell
     
     ->END
 === godTalkChoices ===
     *Rebirth
     A new life and another chance to care for others.
-    "And so it shall be." A bolt of lightning strikes you as your soul plummets to back the Earth {park: | }{work: | }{party:to a cold metal slab, various doctors surrounding your once unconscious body.| 9}
+    "And so it shall be." #CLASS: god
+    A bolt of lightning strikes you as your soul plummets to back the Earth {park:onto the ground where you fell. You have been unseen as of yet, but your phone is filled with notifications, begging for your attention. Perhaps you have a second chance.|}{work:into your body as you're being carried into an ambulance. A mix of gasps and shouts come from the crowd gathered around the building which commanded you.|}{party:to a cold metal slab, various doctors surrounding your once unconscious body. Time to try again.|}
     ->END
     
     *Heaven
@@ -509,11 +518,11 @@ VAR party = false
     
     *Hell
     You do not need to answer, fore God sees into your heart and knows your intention. The comfort this light brings dims a little.
-    "I see your attachment. If it is your true will, then it shall be yours."
+    "I see your attachment. If it is your true will, then it shall be yours." #CLASS: god
     bar #CLASS: bar
     A brilliant light shines above you and strikes you down.
    ->backToHell
-   
+  
 === lucifer1 ===
     Lucifer lifts his head, "I cannot say. My beliefs were nothing but hubris and my actions were evil. Lying and trickery are not ways to gain allies, and I let my desires overpower the goodness in my heart. But as {Job:I have shown you, I am not one to back down from my beliefs. |you know, I am not one to relent.} Even if I am not on the throne upon Mount Zaphon, God's will should not be the only will." #CLASS: lcfr
         ->godTalkRegret
