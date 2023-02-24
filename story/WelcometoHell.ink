@@ -91,7 +91,8 @@ VAR party = false
     ~ deathMet = true
     ~sevenDeadlyKnow = true
     ~ startFlags += 1
-    ** Fair point
+    ** [Fair point]
+        'Fair point.'
         ->startOpts2
 
 /////////////////////////////////////////////////////   Version 2 - After 2 tangents   /////////////////////////////////////////////////////
@@ -133,11 +134,11 @@ VAR party = false
     ~ lucyMet = true
     ~ deathMet = true
     ~ startFlags += 1
-    ** Fair point
-        Fair point
+    ** [Fair point]
+        'Fair point.'
     ->startOpts2
 
-*{startFlags >= 2} Mention their names
+*{startFlags >= 2} [Mention their names]
     'You guys have some odd names.'
    "We existed long before you all arrived," snapped War, "Our purpose and lives cannot be compared to that of a human." #CLASS: war
     **[Ask further]
@@ -186,7 +187,7 @@ VAR party = false
         'Why are you all on the lake? It does not seem easy to get it.'
         "Oh, it isn't. It took us quite a few days to dig in." Famine says. #CLASS: fmn
         "Like you did any of the digging. You spent most of it complaining and slugging along." War responds. #CLASS: war
-        "Atleast I helped."
+        "At least I helped." #CLASS: fmn
         'Wait, if it was sealed why dig in?'
         "We couldn't leave Lucy alone forever, now could we?" Death says. #CLASS: dth
         ->session3p1
@@ -211,7 +212,7 @@ VAR party = false
         'Why am I here? I just figured nows the time to ask. This isn't exactly what I pictured when people told me I was going to Hell.'
         "Well you of all should know. You appeared at the table just a bit ago. We expected you to know what you were doing, especially after just jumping into our poker game." Lucifer tells you. #CLASS: lcfr
         Your memories are still a haze. You do remember wanting to play poker simply because it was there, as if you were meant to relax. But your origins are lost within, almost purposefully.
-        -> lineOfQuestioning
+        ->session3p1
     ~askFlag = true
     
     
@@ -221,7 +222,7 @@ VAR party = false
         'Why are you all on the lake? It does not seem easy to get it.'
         "Oh, it isn't. It took us quite a few days to dig in." Famine says. #CLASS: fmn
         "Like you did any of the digging. You spent most of it complaining and slugging along." War responds. #CLASS: war
-        "Atleast I helped."
+        "At least I helped." #CLASS: fmn
         'Wait, if it was sealed why dig in?'
         "We couldn't leave Lucy alone forever, now could we?" Death says. #CLASS: dth
         ->session3p1
