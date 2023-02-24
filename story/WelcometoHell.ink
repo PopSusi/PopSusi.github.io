@@ -50,6 +50,7 @@ VAR party = false
 }
 {startFlags < 2 && startFlags != 0: But, what about | }
 *'Gangs'
+bar #CLASS: bar
     'Like the mafia, the triad, Al Capone'
     
     "I mean, it sucks. People doing terrible things in pursuit of Greed. He isn't even the coolest one. However, {startFlags < 1: It is a grey area. Some do it to protect those they love. Others seek to hurt | as with all your questions, the matter is grey.}" {lucyMet: Lucifer replies. | the reverbating voice replied.} #CLASS: lcfr
@@ -58,6 +59,7 @@ VAR party = false
     -> startOpts1
 
 *'Drugs'
+bar #CLASS: bar
     "In general? I think they're fine. A natural consequence of nature. However, {startFlags < 1: It is a grey area. Some do it to protect those they love. Others seek to hurt | as with all your questions, the matter is grey.}" {lucyMet: Lucifer replies. | the reverbating voice replied.} #CLASS: lcfr
     "Crack gives birth to the warrior inside. You could stand to take advantage of such." {warMet: War adds in. | another man with large muscles adds.} #CLASS: war
     "I prefer the opiods a bit more, but War has a point. Warriors give lead to domination." {conquestMet: Conquest announces. | entered a man with fancy clothes.} #CLASS: cqst
@@ -68,6 +70,7 @@ VAR party = false
     -> startOpts1
 
 *'Politicians'
+bar #CLASS: bar
    "All evil. You need a special kind of narcissim to go into politics." {lucyMet: Lucifer replies. | the reverbating voice replied.} #CLASS: lcfr
    "Most are fine. They seek to improve the lives of those they represent. Others? Their actions lead many to suffer callously, and muddy the name of those who mean good. Keeps Death busy, however." {conquestMet: Conquest announces. | entered a man with fancy clothes.} #CLASS: cqst
    "It's a little too much sometimes. You gotta calm down your work too, Conquest." {deathMet: Death responds| answered a skull-faced man.} #CLASS: dth
@@ -83,6 +86,7 @@ VAR party = false
   
 
 *{gangsFlag} 'He?'
+bar #CLASS: bar
     "He? Oh yeah, greed. The Seven Deadly are real, you know. Watch the other rings for 'ol Lucy." {deathMet: Death responds| answered a skull-faced man.} #CLASS: dth
     ~ lucyMet = true
     "I don't know how many times I've asked you to not call me that, Death." #CLASS: lcfr
@@ -98,6 +102,7 @@ VAR party = false
 /////////////////////////////////////////////////////   Version 2 - After 2 tangents   /////////////////////////////////////////////////////
 - (startOpts2)
 *{not gangsFlag} 'Gangs'
+bar #CLASS: bar
     Like the mafias, crips, bloods, all that?
     
     "I mean, it sucks. People doing terrible things in pursuit of Greed. He isn't even the coolest one. However, {startFlags < 1: It is a grey area. Some do it to protect those they love. Others seek to hurt | as with all your questions, the matter is grey.}" {lucyMet: Lucifer replies. | the reverbating voice replied.} #CLASS: lcfr
@@ -106,6 +111,7 @@ VAR party = false
     -> startOpts2
 
 *{not drugsFlag} 'Drugs'
+bar #CLASS: bar
     "In general? I think they're fine. A natural consequence of nature. However, {startFlags < 1: It is a grey area. Some do it to protect those they love. Others seek to hurt | as with all your questions, the matter is grey.}" {lucyMet: Lucifer replies. | the reverbating voice replied.} #CLASS: lcfr
     "Crack gives birth to the warrior inside. You could stand to take advantage of such." {warMet: War adds in. | another man with large muscles adds.} #CLASS: war
     "I prefer the opiods a bit more, but War has a point. Warriors give lead to domination." {conquestMet: Conquest announces. | entered a man with fancy clothes.} #CLASS: cqst
@@ -116,6 +122,7 @@ VAR party = false
     -> startOpts2
 
 *{not poliFlag} 'Politicians'
+bar #CLASS: bar
    "You need a special kind of narcissim to go into politics." {lucyMet: Lucifer replies. | the reverbating voice replied.} #CLASS: lcfr
    "Most are fine. They seek to improve the lives of those they represent. Others? Their actions lead many to suffer callously, and muddy the name of those who mean good. Keeps Death busy, however." {conquestMet: Conquest announces. | entered a man with fancy clothes.} #CLASS: cqst
    "Maybe a little too busy. You have to calm down, Conquest." {deathMet: Death responds.| answered a skull-faced man.} #CLASS: dth
@@ -128,6 +135,7 @@ VAR party = false
    ~ startFlags +=1
   
 *{gangsFlag && not sevenDeadlyKnow} 'Who's he?'
+bar #CLASS: bar
     "He? Oh yeah, Greed. The Seven Deadly are real, you know. Watch the other rings for 'ol Lucy." {deathMet: Death responds| answered a skull-faced man.} #CLASS: dth
     "I don't know how many times I've asked you to not call me that, Death." #CLASS: lcfr
     "Not sure how you couldn't have guessed it. I mean, we're right in front of you too." {deathMet: Death responds| answered a skull-faced man, clearly the one referred to as "Death".} #CLASS: dth
@@ -139,6 +147,7 @@ VAR party = false
     ->startOpts2
 
 *{startFlags >= 2} [Mention their names]
+bar #CLASS: bar
     'You guys have some odd names.'
    "We existed long before you all arrived," snapped War, "Our purpose and lives cannot be compared to that of a human." #CLASS: war
     **[Ask further]
@@ -178,7 +187,7 @@ VAR party = false
         'Why am I here? I just figured nows the time to ask. This isn't exactly what I pictured when people told me I was going to Hell.'
         "Well you of all should know. You appeared at the table just a bit ago. We expected you to know what you were doing, especially after just jumping into our poker game." Lucifer tells you. #CLASS: lcfr
         Your memories are still a haze. You do remember wanting to play poker simply because it was there, as if you were meant to relax. But your origins are lost within yourself.
-    
+        ~lucifer += 1
         ~askFlag = true
         ->session3p1
     *[Play it off]
@@ -212,8 +221,10 @@ VAR party = false
         'Why am I here? I just figured nows the time to ask. This isn't exactly what I pictured when people told me I was going to Hell.'
         "Well you of all should know. You appeared at the table just a bit ago. We expected you to know what you were doing, especially after just jumping into our poker game." Lucifer tells you. #CLASS: lcfr
         Your memories are still a haze. You do remember wanting to play poker simply because it was there, as if you were meant to relax. But your origins are lost within, almost purposefully.
+        ~lucifer += 1
+         ~askFlag = true
         ->session3p1
-    ~askFlag = true
+   
     
     
     *[Play it off]
@@ -362,7 +373,8 @@ VAR party = false
 === lineOfQuestioning ===
     {themCount != 0:'Alright, but what about you | }
     *{deathFlag} [Death]
-        Death'
+        Death
+        bar #CLASS: bar
         {themCount == 0 && theirNames:"Well we've already told ya, each of us ain't from where you are." |} #CLASS: dth
         {themCount == 0:"Well you do know we ain't from Earth. Came right of the void, you could say."|} #CLASS: dth
          {themCount == 0:'Well, what would you be if you were human?' |}
@@ -372,7 +384,8 @@ VAR party = false
         ->lineOfQuestioning
     
     *{warFlag} [War]
-        War'
+        War
+        bar #CLASS: bar
         {themCount == 0 && theirNames:"We have already informed you that our origins are divine."|} #CLASS: war
         {themCount == 0: "We existed long before you all arrived," snapped War, "Our purpose and lives cannot be compared to that of a human." |} #CLASS: war
          {themCount == 0:'Well, what would you be if you were human?' |}
@@ -385,7 +398,8 @@ VAR party = false
         ->lineOfQuestioning
     
     *{conquestFlag} [Conquest]
-        Conquest'
+        Conquest
+        bar #CLASS: bar
         {themCount == 0 && theirNames: "I think we have already mentioned that we are not of your kind nor world."|} #CLASS: cqst
         {themCount == 0:"Oh that is funny. You must know that we are not of your kind nor world."|} #CLASS: cqst
         {themCount == 0:'I understand, but what if you were a human?' |}
@@ -395,7 +409,8 @@ VAR party = false
             ->lineOfQuestioning
     
     *{famineFlag} [Famine]
-        Famine'
+        Famine
+        bar #CLASS: bar
         {themCount == 0 && theirNames: "I believe War has told you before that we didn't come from Earth."|} #CLASS: fmn
         {themCount == 0:"Oh bother, we haven't told you. We aren't human, we never were. Just cosmic and divine creations."|} #CLASS: fmn
         {themCount == 0:'I get it, don't worry. But what if you were human?' |}
@@ -418,6 +433,7 @@ VAR party = false
 ->lucifersOrigin
 
 === lucifersOrigin ===
+bar #CLASS: bar
     Lucifer hunched slightly, lowering his strong demeanor.
     "I was one of God's angel, one of his closest council, tasked with tempting humans to test their faith. Tell me, have you at least heard of Job?" #CLASS: lcfr
     
@@ -433,6 +449,7 @@ VAR party = false
     
     *No
     'No, I haven't.'
+    bar #CLASS: bar
     Lucifer's deep leathery voice spoke, "Job was a shepard, caring for his large family. I despised the man. I believed him a man faithful only for the good fortune life had brought him. I spoke to the Lord and he told me I could test him," #CLASS: lcfr
     Lucifer silences himself for a second, before cobbling together the words, 
     "I killed his family. I took his land, his cattle, his crop. And through it all he still believed in the Lord." #CLASS: lcfr
@@ -463,7 +480,7 @@ VAR party = false
         'Conquest. Can you deal us up some more cards.'
         "Of course."  #CLASS: cqst
         Conquest reshuffles the deck, passes each person 3 cards and the deck is placed back on to the table.
-        The table of five becomes six as you decide to stay. Though he will not say, perhaps he is regretful. To you, it matters not his past, as it's everyone's future you care about.
+        The table of five becomes six as you decide to stay. Though he will not say, perhaps he is regretful of what he has done. To you, it matters not his past, as it's everyone's future you care about.
     ->END
     *Continue.
         Now is not the time to pry.
@@ -473,6 +490,9 @@ VAR party = false
         The table of five becomes six as you decide to stay. Though he will not say, perhaps he is regretful. There will be plenty of time to find out in Hell.
         ~lucifer += 1
         ~luciferFirstTime = false
+        
+        **{lucifer >= 2} 'Do you regret it?'
+        {luciferFirstTime: ->lucifer1 | ->lucifer2 }
         ->END
     
         
