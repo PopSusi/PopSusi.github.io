@@ -116,7 +116,7 @@ h2 {
 
 p {
     font-size: 13pt;
-    color: #888;
+    color: white;
     line-height: 1.7em;
     font-weight: lighter;
 }
@@ -275,7 +275,7 @@ body.dark {
     width: 100%;
     height: 4px;
     background: gray;
-    color: none;
+    color: black;
 }
 
 .cqst{

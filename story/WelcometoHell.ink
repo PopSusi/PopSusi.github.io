@@ -85,7 +85,7 @@ VAR party = false
 *{gangsFlag} 'He?'
     "He? Oh yeah, greed. The Seven Deadly are real, you know. Watch the other rings for 'ol Lucy." {deathMet: Death responds| answered a skull-faced man.} #CLASS: dth
     ~ lucyMet = true
-    "I don't know how many times I've asked you to not call me that, Death."
+    "I don't know how many times I've asked you to not call me that, Death." #CLASS: lcfr
     "Not sure how you couldn't have guessed it. I mean, we're right in front of you too." {deathMet: Death responds| answered a skull-faced man, clearly the one referred to as "Death".} #CLASS: dth
     ~ famineMet = true
     ~ deathMet = true
@@ -128,7 +128,7 @@ VAR party = false
   
 *{gangsFlag && not sevenDeadlyKnow} 'Who's he?'
     "He? Oh yeah, Greed. The Seven Deadly are real, you know. Watch the other rings for 'ol Lucy." {deathMet: Death responds| answered a skull-faced man.} #CLASS: dth
-    "I don't know how many times I've asked you to not call me that, Death."
+    "I don't know how many times I've asked you to not call me that, Death." #CLASS: lcfr
     "Not sure how you couldn't have guessed it. I mean, we're right in front of you too." {deathMet: Death responds| answered a skull-faced man, clearly the one referred to as "Death".} #CLASS: dth
     ~ lucyMet = true
     ~ deathMet = true
