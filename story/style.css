@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700|Quattrocento:700');
 
+:root{
+    --dth: #8ab8ff;
+    --cqst: #ffffcc;
+    --war: #ff9933;
+    --fmn: #ffdba8;
+    --lcfr: #ff3326;
+    --god: #fff51f;
+}
+
+
 body {
     font-family: 'Open Sans', sans-serif;
     font-weight: lighter;
@@ -269,25 +279,25 @@ body.dark {
 }
 
 .cqst{
-    color: white;
+    color: var(--cqst);
 }
 
 .dth{
-    color: var(--death);
+    color: var(--dth);
 }
 
 .fmn{
-    color: beige;
+    color: var(--fmn);
 }
 
 .war{
-    color: orange;
+    color: var(--war);
 }
 
 .lcfr{
-    color: red;
+    color: var(--lcfr);
 }
 
 .god{
-    color: yellow;
+    color: var(--god);
 }
