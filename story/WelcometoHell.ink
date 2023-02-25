@@ -390,7 +390,6 @@ bar #CLASS: bar
         Death
         bar #CLASS: bar
         #IMAGE: img/death.jpg
-        **Continue
         {themCount == 0 && theirNames:"Well we've already told ya, each of us ain't from where you are." |} #CLASS: dth
         {themCount == 0:"Well you do know we ain't from Earth. Came right of the void, you could say."|} #CLASS: dth
          {themCount == 0:'Well, what would you be if you were human?' |}
@@ -403,7 +402,6 @@ bar #CLASS: bar
         War
         bar #CLASS: bar
         #IMAGE: img/war.jpg
-        **Continue
         {themCount == 0 && theirNames:"We have already informed you that our origins are divine."|} #CLASS: war
         
         {themCount == 0: "We existed long before you all arrived," snapped War, "Our purpose and lives cannot be compared to that of a human." |} #CLASS: war
@@ -423,7 +421,6 @@ bar #CLASS: bar
         Conquest
         bar #CLASS: bar
         #IMAGE: img/conquest.jpg
-        **Continue
         {themCount == 0 && theirNames: "I think we have already mentioned that we are not of your kind nor world."|} #CLASS: cqst
         {themCount == 0:"Oh that is funny. You must know that we are not of your kind nor world."|} #CLASS: cqst
         {themCount == 0:'I understand, but what if you were a human?' |}
