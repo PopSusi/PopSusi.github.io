@@ -205,7 +205,7 @@ bar #CLASS: bar
     **The lake
     'Why's the whole area covered in ice?'
     Lucifer straightens his back out, as much as a large red human could with half their body in ice. The table clutches their cards tight as enormous leathery wings flap out from behind him, sending a large gust of wind through the whole ice cage. The wind nearly blows down Famine, and Death's cards are blown out of his bony hands.
-    #IMAGE:: img/lucifer.png
+    #IMAGE:1 img/lucifer.png
     "Damn, Lucy! A little too hard, my cards are flown!" He scrambles after his cards in the wind. #CLASS: dth
     "Apologies for my theatrics, Death. They asked and I owe an explanation. When I was sent to Hell, I fell into Cocytus. When I tried to fly out, my wings only froze the lake. In fear, I lost myself and kept flapping trying to climb out. For so long I tried to fly and only created this cocoon of ice." Lucifer says, with a heavy shame. #CLASS: lcfr
     ~lucifer += 1
@@ -388,8 +388,8 @@ bar #CLASS: bar
         ->lineOfQuestioning
     
     *{warFlag} [War]
-        #IMAGE: img/war.jpg
         War
+        #IMAGE: img/war.jpg
         bar #CLASS: bar
         {themCount == 0 && theirNames:"We have already informed you that our origins are divine."|} #CLASS: war
         
