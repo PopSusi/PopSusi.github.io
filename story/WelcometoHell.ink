@@ -73,7 +73,8 @@ bar #CLASS: bar
 bar #CLASS: bar
    "All evil. You need a special kind of narcissim to go into politics." {lucyMet: Lucifer replies. | the reverbating voice replied.} #CLASS: lcfr
    "Most are fine. They seek to improve the lives of those they represent. Others? Their actions lead many to suffer callously, and muddy the name of those who mean good. Keeps Death busy, however." {conquestMet: Conquest announces. | entered a man with fancy clothes.} #CLASS: cqst
-   "It's a little too much sometimes. You gotta calm down your work too, Conquest." {deathMet: Death responds| answered a skull-faced man.} #CLASS: dth
+   "It's a little too much sometimes. You gotta calm down your work too, Conquest." {deathMet: Death responds.| answered a skull-faced man.} #CLASS: dth
+   
    ~ deathMet = true
    ~ conquestMet = true
    ~ poliFlag = true
@@ -204,6 +205,7 @@ bar #CLASS: bar
     **The lake
     'Why's the whole area covered in ice?'
     Lucifer straightens his back out, as much as a large red human could with half their body in ice. The table clutches their cards tight as enormous leathery wings flap out from behind him, sending a large gust of wind through the whole ice cage. The wind nearly blows down Famine, and Death's cards are blown out of his bony hands.
+    #IMAGE img/lucifer.png
     "Damn, Lucy! A little too hard, my cards are flown!" He scrambles after his cards in the wind. #CLASS: dth
     "Apologies for my theatrics, Death. They asked and I owe an explanation. When I was sent to Hell, I fell into Cocytus. When I tried to fly out, my wings only froze the lake. In fear, I lost myself and kept flapping trying to climb out. For so long I tried to fly and only created this cocoon of ice." Lucifer says, with a heavy shame. #CLASS: lcfr
     ~lucifer += 1
@@ -241,6 +243,7 @@ bar #CLASS: bar
     **The lake
     'Why's the whole area covered in ice?'
     Lucifer straightens his back out, as much as a large red human could with half their body in ice. The table clutches their cards tight as enormous leathery wings flap out from behind him, sending a large gust of wind through the whole ice cage. The wind nearly blows down Famine, and Death's cards are blown out of his bony hands.
+    #IMAGE img/lucifer.png
     "Damn, Lucy! A little too hard, my cards are flown!" He scrambles after his cards in the wind. #CLASS: dth
     "Apologies for my theatrics, Death. They asked and I owe an explanation. When I was sent to Hell, I fell into Cocytus. When I tried to fly out, my wings only froze the lake. In fear, I lost myself and kept flapping trying to climb out. For so long I tried to fly and only created this cocoon of ice." Lucifer says, with a heavy shame. #CLASS: lcfr
     ~lucifer += 1
@@ -374,6 +377,7 @@ bar #CLASS: bar
     {themCount != 0:'Alright, but what about you | }
     *{deathFlag} [Death]
         Death
+        #IMAGE img/death.jpg
         bar #CLASS: bar
         {themCount == 0 && theirNames:"Well we've already told ya, each of us ain't from where you are." |} #CLASS: dth
         {themCount == 0:"Well you do know we ain't from Earth. Came right of the void, you could say."|} #CLASS: dth
@@ -385,6 +389,7 @@ bar #CLASS: bar
     
     *{warFlag} [War]
         War
+        #IMAGE img/war.jpg
         bar #CLASS: bar
         {themCount == 0 && theirNames:"We have already informed you that our origins are divine."|} #CLASS: war
         {themCount == 0: "We existed long before you all arrived," snapped War, "Our purpose and lives cannot be compared to that of a human." |} #CLASS: war
@@ -399,6 +404,7 @@ bar #CLASS: bar
     
     *{conquestFlag} [Conquest]
         Conquest
+        #IMAGE img/conquest.jpg
         bar #CLASS: bar
         {themCount == 0 && theirNames: "I think we have already mentioned that we are not of your kind nor world."|} #CLASS: cqst
         {themCount == 0:"Oh that is funny. You must know that we are not of your kind nor world."|} #CLASS: cqst
@@ -410,6 +416,7 @@ bar #CLASS: bar
     
     *{famineFlag} [Famine]
         Famine
+        #IMAGE img/famine.jpg
         bar #CLASS: bar
         {themCount == 0 && theirNames: "I believe War has told you before that we didn't come from Earth."|} #CLASS: fmn
         {themCount == 0:"Oh bother, we haven't told you. We aren't human, we never were. Just cosmic and divine creations."|} #CLASS: fmn
