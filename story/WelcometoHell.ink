@@ -42,7 +42,15 @@ VAR work = false
 VAR party = false
 
 -> start
+
 === start ===
+     Please set the theme into Dark Mode by selecting the 'theme' icon in the top right. #CLASS: warn
+     A known bug with Ink is that images will offset choices underneath the viewing area. #CLASS: warn
+     When this happens, please save your game and load it by selecting the 'save' and 'load' icon in the top right. #CLASS: warn
+     *[I'm Ready]
+        ->section1
+
+=== section1 ===
 -   'So, what about...'
 - (startOpts1)
 {startFlags >=2:
@@ -205,7 +213,7 @@ bar #CLASS: bar
     **The lake
     'Why's the whole area covered in ice?'
     Lucifer straightens his back out, as much as a large red human could with half their body in ice. The table clutches their cards tight as enormous leathery wings flap out from behind him, sending a large gust of wind through the whole ice cage. The wind nearly blows down Famine, and Death's cards are blown out of his bony hands.
-    #IMAGE:1 img/lucifer.png
+    #IMAGE: img/lucifer.png
     "Damn, Lucy! A little too hard, my cards are flown!" He scrambles after his cards in the wind. #CLASS: dth
     "Apologies for my theatrics, Death. They asked and I owe an explanation. When I was sent to Hell, I fell into Cocytus. When I tried to fly out, my wings only froze the lake. In fear, I lost myself and kept flapping trying to climb out. For so long I tried to fly and only created this cocoon of ice." Lucifer says, with a heavy shame. #CLASS: lcfr
     ~lucifer += 1
@@ -266,14 +274,16 @@ bar #CLASS: bar
         ~youFlag = false
         ***Yes
             'Why yes I was. It was a nice day off work that I took for myself.'
-            Lucifer, for the first time, contributes in a casual manner, "I had loved walking under that Earthly sun. The heat is cast soothed me. Sweaty to an ungodly extent... maybe I shouldn't say ungodly." #CLASS: lcfr
+            Lucifer, for the first time, contributes in a casual manner, "I had loved walking under that Earthly sun. The heat is cast soothed me. Sweaty to an ungodly extent... maybe I shouldn't say ungodly." 
             The table chuckles a bit at his moment of openness.
             ~lucifer += 1
+            'It was good, but I just felt dizzy. My mind was screaming not to, but my body simply laid out onto the ground.'
             ->session3p2
         ***No 
             'Well no actually. It was a sad day, a lonely one. My partner had left me, and my friends too. Said I never cared enough.'
             "Bollocks!" Death exclaims, "You've been a perfectly lovely guest at our table! I'd love to have you around." #CLASS: dth
             The table nods and mumbles in agreement.
+            'It was good, but I just felt dizzy. My mind was screaming not to, but my body simply laid out onto the ground.'
             ->session3p2
         
     **'at a party'
@@ -281,13 +291,11 @@ bar #CLASS: bar
         ~party = true
         ~youFlag = false
         ***Yes
-            'A fantastic victory. I had finally gotten a job in the career I studied for. It took a long time, but I had finally made it.' 
+            'A fantastic victory. I had finally gotten a job in the career I studied for. It took a long time, but I had finally made it. I got carried away in my self-celebration. I had thought myself sober enough to drive home, but clearly I was not.'
             ->session3p2
             
         ***No
-            'Not really. It felt like an act. Wanting to show I was popular.'
-            
-            'I had thought myself sober enough to drive home, but clearly I was not.'
+            'Not really. It felt like an act. Wanting to show I was popular. From there, I had thought myself sober enough to drive home, but clearly I was not.'
             ->session3p2
         
     **'working'
@@ -296,11 +304,14 @@ bar #CLASS: bar
         ~work = true
         ~youFlag = false
         ***Yes 
+        'I'm glad you think so. I tried my best to help small companies with their finances. It took up a lot of my time, almost too much.'
+            You remember your friends and family, and the neglect they felt as you were consumed by your work alone.
         ->session3p2
         ***No
             'Not exactly. I was just an accountant working for a large company. I gave people their paychecks, but I would not call it noble.'
             Conquest counters such notion, 
             "Any work is a service for someone. I cannot imagine you doing work you did not believe in." #CLASS: cqst
+            Despite his beliefs, it was not. Being forced to lie and write wrong reciepts to back up a large company is not noble.
             ->session3p2
     *[Question the others]
         'What about you guys.'
@@ -379,6 +390,7 @@ bar #CLASS: bar
         Death
         bar #CLASS: bar
         #IMAGE: img/death.jpg
+        **Continue
         {themCount == 0 && theirNames:"Well we've already told ya, each of us ain't from where you are." |} #CLASS: dth
         {themCount == 0:"Well you do know we ain't from Earth. Came right of the void, you could say."|} #CLASS: dth
          {themCount == 0:'Well, what would you be if you were human?' |}
@@ -389,8 +401,9 @@ bar #CLASS: bar
     
     *{warFlag} [War]
         War
-        #IMAGE: img/war.jpg
         bar #CLASS: bar
+        #IMAGE: img/war.jpg
+        **Continue
         {themCount == 0 && theirNames:"We have already informed you that our origins are divine."|} #CLASS: war
         
         {themCount == 0: "We existed long before you all arrived," snapped War, "Our purpose and lives cannot be compared to that of a human." |} #CLASS: war
@@ -410,6 +423,7 @@ bar #CLASS: bar
         Conquest
         bar #CLASS: bar
         #IMAGE: img/conquest.jpg
+        **Continue
         {themCount == 0 && theirNames: "I think we have already mentioned that we are not of your kind nor world."|} #CLASS: cqst
         {themCount == 0:"Oh that is funny. You must know that we are not of your kind nor world."|} #CLASS: cqst
         {themCount == 0:'I understand, but what if you were a human?' |}
