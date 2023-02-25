@@ -377,8 +377,8 @@ bar #CLASS: bar
     {themCount != 0:'Alright, but what about you | }
     *{deathFlag} [Death]
         Death
-        #IMAGE: img/death.jpg
         bar #CLASS: bar
+        #IMAGE: img/death.jpg
         {themCount == 0 && theirNames:"Well we've already told ya, each of us ain't from where you are." |} #CLASS: dth
         {themCount == 0:"Well you do know we ain't from Earth. Came right of the void, you could say."|} #CLASS: dth
          {themCount == 0:'Well, what would you be if you were human?' |}
@@ -388,14 +388,18 @@ bar #CLASS: bar
         ->lineOfQuestioning
     
     *{warFlag} [War]
-        War
         #IMAGE: img/war.jpg
+        War
         bar #CLASS: bar
         {themCount == 0 && theirNames:"We have already informed you that our origins are divine."|} #CLASS: war
+        
         {themCount == 0: "We existed long before you all arrived," snapped War, "Our purpose and lives cannot be compared to that of a human." |} #CLASS: war
+        
          {themCount == 0:'Well, what would you be if you were human?' |}
+         
          {themCount == 0:The table was shocked by this line of questioning. Them, concepts and immortals, questioned what if they were humans. | }
             "Obviously a warrior of Sparta." #CLASS: war
+            
             'Not king?'
             War laughs heartily at the notion.
             "Too noble for someone like me. I deserve front row seats." #CLASS: war
@@ -404,8 +408,8 @@ bar #CLASS: bar
     
     *{conquestFlag} [Conquest]
         Conquest
-        #IMAGE: img/conquest.jpg
         bar #CLASS: bar
+        #IMAGE: img/conquest.jpg
         {themCount == 0 && theirNames: "I think we have already mentioned that we are not of your kind nor world."|} #CLASS: cqst
         {themCount == 0:"Oh that is funny. You must know that we are not of your kind nor world."|} #CLASS: cqst
         {themCount == 0:'I understand, but what if you were a human?' |}
@@ -416,8 +420,8 @@ bar #CLASS: bar
     
     *{famineFlag} [Famine]
         Famine
-        #IMAGE: img/famine.jpg
         bar #CLASS: bar
+        #IMAGE: img/famine.jpg
         {themCount == 0 && theirNames: "I believe War has told you before that we didn't come from Earth."|} #CLASS: fmn
         {themCount == 0:"Oh bother, we haven't told you. We aren't human, we never were. Just cosmic and divine creations."|} #CLASS: fmn
         {themCount == 0:'I get it, don't worry. But what if you were human?' |}
