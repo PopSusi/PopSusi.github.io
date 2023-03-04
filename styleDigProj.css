@@ -1,0 +1,177 @@
+h1, h2, h3, h4, h5, h6, p, a  {
+  padding:4px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* 2. Make nav sticky */
+main > nav {
+  position: sticky;
+  top: 2rem;
+  align-self: start;
+}
+
+a{
+	text-decoration: none;
+	font-weight: bold;
+}
+	html, body { margin:0; padding:0 }
+	body{
+		background-color: #ede3ee;
+		font-size: 1vw;
+		font-family: "Bookman Old Style", Georgia, serif;
+  		font-weight: 100;
+  		color: black;
+  		width: auto;
+}
+ul{
+	list-style: none;
+	padding-left: 20px;
+}
+li{
+	margin-top: 1em;
+}
+a{
+	text-decoration: none;
+	color: white;
+}
+#body-wrapper{
+	justify-content: center;
+	display:flex;
+	flex-direction: column;
+}
+
+#projBody{
+	margin-left: 15em;
+	position: relative;
+	background-color: #5dafb9;
+	color: white;
+}
+
+#nav-wrap{
+	justify-content: center;
+	display:flex;
+	flex-direction: column;
+}
+.section-nav {
+  padding-left: 0;
+  border-left: 1px solid #efefef;
+  width: 15em;
+  z-index: 1;
+}
+
+.line{
+	width: 50vw;
+	margin-left: 10%;
+	height: 3px;
+	background-color: black;
+	display: block;
+}
+.nav-wrap{
+	height: 100vw;
+  	width: 15em;
+	align-items: center;
+	position: fixed!important;
+	display: flex;
+	justify-content: center;
+}
+#svgHold{
+	display: flex;
+	justify-content: center;
+}
+
+.centered{
+	padding-top: 3px;
+}
+
+.projhead{
+	margin-bottom: 0px;
+}
+.projsubhead{
+	margin-top: 0px;
+}
+.project{
+	padding-left: 2em;
+	width: 80%;
+	
+}
+
+.projImg{
+	padding-left: 1em;
+}
+
+#WTH{
+	width: 13em;
+	height: 5.625em;
+	position: relative;
+}
+
+#WTH::before{
+	content: "";
+  	position: absolute;
+  	top: 0; left: 0;
+  	width: 100%; height: 100%;
+	background-image: url("https://i.imgur.com/HamS9Jb.png");
+	filter: blur(1rem);
+}
+
+#WTHInside{
+	position: relative;
+	display: flex;
+	padding-top: 7%;
+	padding-bottom: 7%;
+	align-content: center;
+	justify-content: center;
+}
+
+#web{
+	width: 13em;
+	height: 5.625em;
+	position: relative;
+}
+
+#web::before{
+	content: "";
+  	position: absolute;
+  	top: 0; left: 0;
+  	width: 100%; height: 100%;
+	background-image: url("https://i.imgur.com/sRQyxJ9.png");
+	filter: blur(1rem);
+}
+
+#webIn{
+	position: relative;
+	display: flex;
+	padding-top: 7%;
+	padding-bottom: 7%;
+	align-content: center;
+	justify-content: center;
+}
+
+/* TEMPLATE FOR PROJECT BLUR
+#img{
+	width: 13em;
+	height: 5.625em;
+	position: relative;
+}
+
+#img::before{
+	content: "";
+  	position: absolute;
+  	top: 0; left: 0;
+  	width: 100%; height: 100%;
+	background-image: url("IMGUR LINK");
+	filter: blur(1rem);
+}
+
+#inside div{
+	position: relative;
+	display: flex;
+	padding-top: 7%;
+	padding-bottom: 7%;
+	align-content: center;
+	justify-content: center;
+}
+*/
